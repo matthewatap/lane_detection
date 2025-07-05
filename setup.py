@@ -39,11 +39,6 @@ pip install groundingdino-py
 mkdir -p /workspace/lane_detection
 cd /workspace/lane_detection
 
-# Copy the main script
-cat > lane_detection_sam.py << 'EOF'
-# [Insert the Python script here]
-EOF
-
 echo "=== Setup Complete ==="
 echo "To run:"
 echo "1. Set your GOOGLE_API_KEY environment variable"
