@@ -1,0 +1,14 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+segment-anything
+opencv-python
+google-genai
+Pillow>=10.0.0
+numpy>=1.24.0
+supervision
+
+# Optional but recommended
+matplotlib
+jupyter
+python-dotenv
