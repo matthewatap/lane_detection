@@ -30,18 +30,37 @@ A high-quality lane detection system that combines Google's Gemini for semantic 
 git clone https://github.com/YOUR_USERNAME/lane-detection-sam.git
 cd lane-detection-sam
 
-Install dependencies:
+2. Install dependencies:
 
 bashpip install -r requirements.txt
 
-Download SAM checkpoint:
+3. Download SAM checkpoint:
 
 bash# The script will auto-download, or manually download:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
-Set your Gemini API key:
+4. Set your Gemini API key:
 
 bashexport GOOGLE_API_KEY="your_api_key_here"
+Usage
+Basic Usage
+pythonpython src/enhanced_sam_detection.py
+Process specific image:
+python# Edit the test_image variable in main() or pass as argument
+python src/enhanced_sam_detection.py --image "path/to/image.jpg"
+Output
+The system generates:
+
+*_composite.png - Original image with colored lane overlays
+*_overlay.png - Lane masks only
+*_results.json - Detailed detection results
+
+5. Performance
+
+GPU (RTX 4090): ~2-5 seconds per image
+M2 Mac: ~5-10 seconds per image
+CPU: ~30-60 seconds per image
+
 Usage
 Basic Usage
 pythonpython src/enhanced_sam_detection.py
@@ -67,7 +86,7 @@ License
 MIT License - see LICENSE file for details.
 EOF
 
-## Step 6: Create Setup Script
+6. Create Setup Script
 
 ```bash
 cat > setup.sh << 'EOF'
@@ -108,6 +127,8 @@ echo "Setup complete! Don't forget to set your GOOGLE_API_KEY environment variab
 EOF
 
 chmod +x setup.sh
+
+
 Step 7: Create RunPod Documentation
 bashmkdir docs
 cat > docs/RUNPOD.md << 'EOF'
@@ -142,10 +163,10 @@ Performance Tips
 Use persistent storage for model checkpoints
 Enable GPU monitoring: watch -n 1 nvidia-smi
 For batch processing, consider increasing RAM allocation
-EOF
 
 
-## Step 8: Initialize Git Repository
+
+Step 8: Initialize Git Repository
 
 ```bash
 # Initialize git
