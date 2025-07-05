@@ -25,21 +25,21 @@ A high-quality lane detection system that combines Google's Gemini for semantic 
 
 ### Setup
 
-1. Clone the repository:
-```bash
+### 1. Clone the repository:
+bash
 git clone https://github.com/YOUR_USERNAME/lane-detection-sam.git
 cd lane-detection-sam
 
-2. Install dependencies:
+### 2. Install dependencies:
 
 bashpip install -r requirements.txt
 
-3. Download SAM checkpoint:
+### 3. Download SAM checkpoint:
 
 bash# The script will auto-download, or manually download:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
-4. Set your Gemini API key:
+### 4. Set your Gemini API key:
 
 bashexport GOOGLE_API_KEY="your_api_key_here"
 Usage
@@ -55,7 +55,7 @@ The system generates:
 *_overlay.png - Lane masks only
 *_results.json - Detailed detection results
 
-5. Performance
+### 5. Performance
 
 GPU (RTX 4090): ~2-5 seconds per image
 M2 Mac: ~5-10 seconds per image
@@ -86,9 +86,9 @@ License
 MIT License - see LICENSE file for details.
 EOF
 
-6. Create Setup Script
+### 6. Create Setup Script
 
-```bash
+bash
 cat > setup.sh << 'EOF'
 #!/bin/bash
 # Setup script for lane detection system
@@ -129,7 +129,7 @@ EOF
 chmod +x setup.sh
 
 
-Step 7: Create RunPod Documentation
+### Step 7: Create RunPod Documentation
 bashmkdir docs
 cat > docs/RUNPOD.md << 'EOF'
 # RunPod Deployment Guide
@@ -142,7 +142,7 @@ cat > docs/RUNPOD.md << 'EOF'
 
 ## Installation
 
-```bash
+bash
 cd /workspace
 git clone https://github.com/YOUR_USERNAME/lane-detection-sam.git
 cd lane-detection-sam
@@ -166,9 +166,9 @@ For batch processing, consider increasing RAM allocation
 
 
 
-Step 8: Initialize Git Repository
+### Step 8: Initialize Git Repository
 
-```bash
+bash
 # Initialize git
 git init
 
